@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sameera Rajapakshe — Sri Lanka Tour Guide</title>
+<meta name="description" content="Sameera Rajapakshe is a professional Sri Lankan tour guide from Kegalle with 100+ tours and 3 years of experience. Private, family, cultural and wildlife tours across Sri Lanka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+<style>
+  :root{
+    --bg:#0c0d10;
+    --bg-soft:#14161b;
+    --card:#191c22;
+    --line:rgba(255,255,255,.08);
+    --text:#f4f5f7;
+    --muted:#9aa0ab;
+    --accent:#ff6a2b;
+    --accent2:#ff3d77;
+    --accent3:#a855f7;
+    --grad:linear-gradient(135deg,#ff6a2b 0%,#ff3d77 55%,#a855f7 100%);
+    --grad-soft:linear-gradient(135deg,rgba(255,106,43,.16),rgba(255,61,119,.12),rgba(168,85,247,.10));
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.65;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.15}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  section{padding:88px 0;position:relative}
+
+  /* ---------- Nav ---------- */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(12,13,16,.75);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.15rem}
+  .logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:28px;align-items:center;font-size:.92rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;font-weight:600;padding:11px 22px;border-radius:999px;font-size:.92rem;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 24px rgba(255,90,60,.35)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,90,60,.5)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .menu-btn{display:none;background:none;border:none;color:var(--text);font-size:1.6rem;cursor:pointer}
+
+  /* ---------- Hero ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(700px 420px at 85% 15%,rgba(255,106,43,.18),transparent 60%),
+    radial-gradient(600px 420px at 10% 85%,rgba(168,85,247,.14),transparent 60%),
+    radial-gradient(500px 300px at 50% 50%,rgba(255,61,119,.07),transparent 60%);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--grad);border-radius:2px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.3rem);font-weight:800;margin-bottom:18px}
+  .hero p.lead{color:var(--muted);font-size:1.08rem;max-width:520px;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .socials{display:flex;gap:12px}
+  .socials a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.25s;background:var(--bg-soft)}
+  .socials a:hover{background:var(--grad);border-color:transparent;transform:translateY(-3px)}
+  .socials svg{width:20px;height:20px;fill:#fff}
+  .hero-photo{position:relative;justify-self:center;width:min(380px,86vw)}
+  .hero-photo::before{content:"";position:absolute;inset:-14px;background:var(--grad);border-radius:28px;filter:blur(34px);opacity:.45;z-index:0}
+  .hero-photo .frame{position:relative;z-index:1;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:var(--card)}
+  .hero-photo img{width:100%;height:460px;object-fit:cover;object-position:center 20%}
+  .badge{position:absolute;z-index:2;background:rgba(20,22,27,.9);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:16px;padding:12px 18px;font-size:.85rem}
+  .badge b{font-family:'Sora',sans-serif;font-size:1.05rem;display:block}
+  .badge.b1{bottom:24px;left:-30px}
+  .badge.b2{top:24px;right:-26px}
+  .badge .grad-text{font-weight:800}
+
+  /* ---------- Stats ---------- */
+  .stats{padding:0 0 30px}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;background:var(--grad-soft);border:1px solid var(--line);border-radius:24px;padding:34px 28px}
+  .stat{text-align:center}
+  .stat b{font-family:'Sora',sans-serif;font-size:2.1rem;font-weight:800;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{color:var(--muted);font-size:.88rem}
+
+  /* ---------- Section headers ---------- */
+  .sec-head{margin-bottom:48px;max-width:640px}
+  .sec-head .num{font-family:'Sora',sans-serif;color:var(--accent);font-weight:700;letter-spacing:.2em;font-size:.85rem}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;margin-top:8px}
+  .sec-head p{color:var(--muted);margin-top:12px}
+
+  /* ---------- About ---------- */
+  .about{background:var(--bg-soft)}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
+  .about-photo{position:relative}
+  .about-photo img{border-radius:22px;height:440px;width:100%;object-fit:cover;border:1px solid var(--line)}
+  .about-photo::after{content:"";position:absolute;inset:auto -16px -16px auto;width:150px;height:150px;background:var(--grad);border-radius:22px;opacity:.25;filter:blur(30px)}
+  .about ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+  .about li{display:flex;gap:12px;color:var(--muted)}
+  .about li::before{content:"✓";color:var(--accent);font-weight:700;flex-shrink:0}
+  .about p{color:var(--muted)}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 26px;transition:.3s;position:relative;overflow:hidden}
+  .service::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:.3s}
+  .service:hover{transform:translateY(-6px);border-color:transparent}
+  .service:hover::before{opacity:1}
+  .service>*{position:relative}
+  .service .icon{width:54px;height:54px;border-radius:14px;background:var(--grad-soft);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px}
+  .service:hover .icon{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25)}
+  .service h3{font-size:1.15rem;margin-bottom:10px}
+  .service p{color:var(--muted);font-size:.93rem}
+  .service:hover p{color:rgba(255,255,255,.9)}
+
+  /* ---------- Gallery ---------- */
+  .gallery{background:var(--bg-soft)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .shot{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);group:shot}
+  .shot img{width:100%;height:340px;object-fit:cover;transition:transform .5s}
+  .shot:hover img{transform:scale(1.05)}
+  .shot .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 22px 18px;background:linear-gradient(transparent,rgba(10,10,12,.92));font-size:.92rem}
+  .shot .cap b{font-family:'Sora',sans-serif;display:block;font-size:1.02rem}
+  .shot .cap span{color:var(--muted);font-size:.84rem}
+
+  /* ---------- Quote ---------- */
+  .quote{text-align:center}
+  .quote blockquote{font-family:'Sora',sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:600;max-width:820px;margin:0 auto}
+  .quote .mark{font-size:3rem;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-family:'Sora',sans-serif;line-height:1}
+  .quote cite{display:block;margin-top:20px;color:var(--muted);font-style:normal;font-size:.95rem}
+
+  /* ---------- Contact ---------- */
+  .contact-card{background:var(--grad-soft);border:1px solid var(--line);border-radius:28px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
+  .contact-card::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--grad);filter:blur(120px);opacity:.22;top:-160px;right:-120px}
+  .contact-card h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:14px;position:relative}
+  .contact-card p{color:var(--muted);max-width:520px;margin:0 auto 30px;position:relative}
+  .contact-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+  .contact-meta{margin-top:26px;color:var(--muted);font-size:.92rem;position:relative}
+  .contact-meta a{color:var(--text);border-bottom:1px dashed var(--muted)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}
+  .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  /* ---------- WhatsApp float ---------- */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 26px rgba(37,211,102,.45);transition:transform .2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.on{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:940px){
+    .hero-grid,.about-grid{grid-template-columns:1fr}
+    .hero-photo{order:-1}
+    .hero-photo img{height:400px}
+    .services-grid{grid-template-columns:1fr 1fr}
+    .stats-grid{grid-template-columns:1fr 1fr;gap:26px}
+    .badge.b1{left:-6px}.badge.b2{right:-6px}
+  }
+  @media(max-width:640px){
+    .nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:rgba(12,13,16,.97);flex-direction:column;padding:22px;gap:18px;border-bottom:1px solid var(--line)}
+    .nav-links.open{display:flex}
+    .menu-btn{display:block}
+    .services-grid,.gallery-grid{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .shot img{height:260px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="logo">Sameera<span>.</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Tours</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="btn" style="padding:9px 20px">Let's Talk</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Hello, my name is</div>
+      <h1>Sameera<br><span class="grad-text">Rajapakshe</span></h1>
+      <p class="lead">Professional Sri Lankan tour guide from Kegalle — full of energy, kind at heart, and great with people. Let me show you the real Sri Lanka, from misty hills to golden beaches.</p>
+      <div class="hero-cta">
+        <a class="btn" href="https://wa.me/94719553699?text=Hi%20Sameera%2C%20I%27d%20like%20to%20plan%20a%20tour%20in%20Sri%20Lanka!" target="_blank" rel="noopener">Plan Your Tour</a>
+        <a class="btn ghost" href="#gallery">See My Tours</a>
+      </div>
+      <div class="socials">
+        <a href="https://wa.me/94719553699" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm7 16.9c-.3.8-1.7 1.6-2.4 1.7-.6.1-1.4.1-2.2-.2-.5-.2-1.2-.4-2.1-.8-3.6-1.6-6-5.2-6.2-5.4-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.8.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.8-.1.2-.2.9-1.1 1.2-1.5.2-.4.5-.3.8-.2.3.1 2.1 1 2.5 1.2.4.2.6.3.7.5.1.1.1.9-.2 1.7z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/18hGjTKdZP/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 32 32"><path d="M18 32V18h5l1-6h-6v-3c0-1.7.5-3 3-3h3V.6C23.4.4 21.6 0 19.6 0 15.4 0 12.5 2.6 12.5 8v4H8v6h4.5v14H18z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="frame"><img src="images/sameera-portrait.jpg" alt="Sameera Rajapakshe, Sri Lankan tour guide"></div>
+      <div class="badge b1"><b class="grad-text">100+</b>Tours Completed</div>
+      <div class="badge b2"><b class="grad-text">3+</b>Years Experience</div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats wrap reveal">
+  <div class="stats-grid">
+    <div class="stat"><b>100+</b><span>Tours Completed</span></div>
+    <div class="stat"><b>3+</b><span>Years Experience</span></div>
+    <div class="stat"><b>25+</b><span>Destinations Covered</span></div>
+    <div class="stat"><b>100%</b><span>Positive Energy</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="images/sameera-smile.jpg" alt="Sameera smiling in a Sri Lankan garden">
+    </div>
+    <div class="reveal">
+      <div class="sec-head" style="margin-bottom:20px">
+        <span class="num">01 — ABOUT ME</span>
+        <h2>Your friend in <span class="grad-text">Sri Lanka</span></h2>
+      </div>
+      <p>Ayubowan! I'm Sameera, a professional tour guide and tour leader born and raised in Kegalle, right in the heart of Sri Lanka between Colombo and Kandy. With over 100 tours guided across the island, I've helped families, couples and solo travelers from around the world experience Sri Lanka the way it should be experienced — with energy, laughter and a local's eye for the hidden gems.</p>
+      <ul>
+        <li>Energetic and friendly — travelers say goodbye as friends, not clients</li>
+        <li>Experienced tour leader with Ceylon Expeditions Travels</li>
+        <li>Great with families and kids — patient, kind and fun</li>
+        <li>Island-wide knowledge: culture, wildlife, beaches, hill country</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">02 — WHAT I OFFER</span>
+      <h2>Tours & <span class="grad-text">Services</span></h2>
+      <p>Every tour is tailor-made. Tell me what you love, and I'll build the perfect Sri Lankan journey around it.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service reveal"><div class="icon">👨‍👩‍👧‍👦</div><h3>Private & Family Tours</h3><p>Tailor-made round trips for families and small groups — safe, flexible and full of fun for every age.</p></div>
+      <div class="service reveal"><div class="icon">🛕</div><h3>Cultural & Heritage</h3><p>Ancient cities, sacred temples, Kandy and the Cultural Triangle — stories that bring 2,500 years of history to life.</p></div>
+      <div class="service reveal"><div class="icon">🐆</div><h3>Wildlife & Nature</h3><p>Safari adventures, spotted deer in Trincomalee, elephants, whales and misty tea country hikes.</p></div>
+      <div class="service reveal"><div class="icon">🏖️</div><h3>Beach & Coastal Escapes</h3><p>From Trincomalee's calm east-coast bays to the golden south — sun, surf and seafood done right.</p></div>
+      <div class="service reveal"><div class="icon">✈️</div><h3>Airport Welcome & Transfers</h3><p>Warm welcome at Bandaranaike Airport with comfortable transport — your holiday starts the moment you land.</p></div>
+      <div class="service reveal"><div class="icon">🗺️</div><h3>Custom Itineraries</h3><p>Honeymoons, photography trips, foodie trails — share your dream and I'll plan the route, hotels and highlights.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="num">03 — MOMENTS</span>
+      <h2>Tour <span class="grad-text">Gallery</span></h2>
+      <p>Real tours, real smiles — a few moments from the road.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="shot reveal"><img src="images/tour-family-uk.jpg" alt="Sameera with a family from the UK on tour in Sri Lanka"><div class="cap"><b>Family Tour — Mr. Douglas & Family, UK</b><span>A full round trip across the island, ending as friends</span></div></div>
+      <div class="shot reveal"><img src="images/airport-welcome.jpg" alt="Airport welcome at Bandaranaike International Airport"><div class="cap"><b>Airport Welcome — Bandaranaike Int'l</b><span>Flowers and smiles the moment you land in Sri Lanka</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="wrap reveal">
+    <span class="mark">“</span>
+    <blockquote>When you're in Trincomalee… you must meet the spotted deer. Sri Lanka is full of little wonders — my job is making sure you don't miss a single one.</blockquote>
+    <cite>— Sameera Rajapakshe, Tour Leader</cite>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <h2>Ready to explore <span class="grad-text">Sri Lanka?</span></h2>
+      <p>Message me on WhatsApp and let's start planning your perfect Sri Lankan adventure — no pressure, just friendly advice from a local.</p>
+      <div class="contact-actions">
+        <a class="btn" href="https://wa.me/94719553699?text=Hi%20Sameera%2C%20I%27d%20like%20to%20plan%20a%20tour%20in%20Sri%20Lanka!" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a class="btn ghost" href="https://www.facebook.com/share/18hGjTKdZP/?mibextid=wwXIfr" target="_blank" rel="noopener">Follow on Facebook</a>
+      </div>
+      <div class="contact-meta">📱 WhatsApp: <a href="tel:+94719553699">+94 71 955 3699</a> &nbsp;·&nbsp; 📍 Kegalle, Sri Lanka</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Sameera Rajapakshe — Sri Lanka Tour Guide</span>
+    <span>Made with ❤️ in Sri Lanka</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/94719553699?text=Hi%20Sameera%2C%20I%27d%20like%20to%20plan%20a%20tour!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm7 16.9c-.3.8-1.7 1.6-2.4 1.7-.6.1-1.4.1-2.2-.2-.5-.2-1.2-.4-2.1-.8-3.6-1.6-6-5.2-6.2-5.4-.2-.2-1.5-2-1.5-3.8s.9-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.8.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.8-.1.2-.2.9-1.1 1.2-1.5.2-.4.5-.3.8-.2.3.1 2.1 1 2.5 1.2.4.2.6.3.7.5.1.1.1.9-.2 1.7z"/></svg>
+</a>
+
+<script>
+  const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
